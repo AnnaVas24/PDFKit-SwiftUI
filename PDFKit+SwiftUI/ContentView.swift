@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let url = Bundle.main.url(forResource: "sample", withExtension: "pdf")!
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Sample PDF")
+                .font(.largeTitle)
+        PDFKitView(url: url)
         }
         .padding()
     }
